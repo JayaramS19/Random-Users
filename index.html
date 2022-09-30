@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <title>Generate Random User - IamNeo</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <div class="py-8 px-8 max-w-md mx-auto bg-white rounded-xl shadow-md space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+                <img class="block mx-auto h-24 rounded-full sm:mx-0 sm:flex-shrink-0" :src="picture" :alt="`${firstName} ${lastName}`">
+                <div class="text-center space-y-2 sm:text-left">
+                  <div class="space-y-0.5">
+                    <p class="text-lg text-black font-semibold">{{firstName}} {{lastName}}</p>
+                    <p class="text-gray-500 font-medium">{{gender}}</p>
+                    <p class="text-gray-500 font-medium mx-auto">{{email}}</p>
+                    <p class="text-gray-500 font-medium">{{phone}}</p>
+                    <p class="text-gray-500 font-medium">{{age}} years</p>
+                  </div>
+                  <button class="px-4 py-1 text-sm text-purple-600 rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2" @click="getRandomUser()">Generate user</button>
+                </div>
+              </div>
+              <!-- github button -->
+              <a :href="github" target="_blank" class="px-4 py-1 mt-14 rounded text-sm text-white bg-black border hover:bg-gray-600 focus:outline-none">View code on github</a>
+        </div>
+
+        <script src="https://unpkg.com/vue@3.0.5"></script>
+        <script src="/app.js"></script>
+    </body>
+</html>
